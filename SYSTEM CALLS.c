@@ -1,4 +1,4 @@
-a) Open and write
+//Open and write
 #include<sys/types.h>
 #include<sys/stat.h>
 #include<fcntl.h>
@@ -19,9 +19,9 @@ write(fd,"This is OS Program",20);
 close(fd);
 }
 }
-OUTPUT:
-This is OS Program
-b) Open and read
+
+
+//Open and read
 #include<sys/types.h>
 #include<sys/stat.h>
 #include<fcntl.h>
@@ -42,8 +42,9 @@ n=read(fd,&buf,1);
 printf("%c",buf);
 }
 }
-OUTPUT:
-c) Opendir and readdir
+
+
+//Opendir and readdir
 #include<stdio.h>
 #include<dirent.h>
 void main(int argc,char **argv)
@@ -58,9 +59,9 @@ printf("%s\n",link->d_name);
 }
 closedir(dp);
 }
-Output:
-OUTPUT:
-d) Stat
+
+
+//Stat
 #include<sys/types.h>
 #include<sys/stat.h>
 #include<fcntl.h>
@@ -77,8 +78,9 @@ printf("No of links: %ld\n",fs.st_nlink);
 printf("Filesize: %ld bytes\n",fs.st_size);
 printf("File in ode: %ld\n",fs.st_ino);
 }
-Output:
-e) seek_set
+
+
+//seek_set
 #include<fcntl.h>
 #include<unistd.h>
 #include<sys/stat.h>
@@ -92,8 +94,9 @@ read(fd,&buf,1);
 printf("The char at offset 5=%c\n",buf);
 close(fd);
 }
-Output:
-f) seek_cur
+
+
+//seek_cur
 #include<sys/types.h>
 #include<fcntl.h>
 #include<unistd.h>
